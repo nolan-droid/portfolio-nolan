@@ -10,7 +10,7 @@ togglebtn.addEventListener("click", function () {
 })
 
 var typed = new Typed(".input", {
-    strings: ["Frontend Developer", "UX Desinger", "Web Developer"],
+    strings: ["Frontend Developer", "UX Designer", "Web Developer"],
     typedSpeed: 70,
     backSpeed: 60,
     loop: true
