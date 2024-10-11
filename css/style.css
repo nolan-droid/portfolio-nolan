@@ -1,0 +1,288 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.ovi-header{
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-color: rgb(85, 81, 69);
+}
+
+.wrapper{
+    width: 1280px;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header{
+    padding: 40px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo i{
+    height: 45px;
+    width: 45px;
+    background-color: rgba(0, 255, 255, 0.734);
+    border-radius: 50%;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.logo .logo-text{
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+}
+
+nav .togglebtn{
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 45px;
+    right: 3%;
+    z-index: 5;
+    cursor: pointer;
+    display: none;
+}
+
+nav .togglebtn span{
+    display: block;
+    background-color: #007ced;
+    margin: 5px 0;
+    width: 100%;
+    height: 3px;
+    transition: 0.3s;
+    transition-property: transform, opacity;
+}
+
+nav .navlinks{
+    list-style-type: none;
+}
+
+nav .navlinks li{
+    display: inline-block;
+    
+}
+
+nav .navlinks li a{
+    color: #e5e5e5;
+    font-size: 18px;
+    margin-right: 2.5rem;
+}
+
+nav .navlinks li a:hover{
+    color: rgba(0, 0, 0, 0.800);
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 4rem;
+}
+
+.container .ovi-pic{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid rgba(222, 230, 231, 0.652);
+    box-shadow: 3px 7px 25px rgb(255, 255, 255);
+}
+
+.ovi-pic img{
+    height: 100%;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.ovi-pic img:hover{
+    transform: scale(1.5);
+}
+
+.ovi-text{
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.ovi-text h5{
+    color: #e5e5e5;
+    font-size: 16px;
+}
+
+.ovi-text h5 span{
+    color: rgba(0, 255, 255, 0.734);
+    font-size: 20px;
+}
+
+.ovi-text h1{
+    color: rgba(0, 255, 255, 0.734);
+    font-size: 3rem;
+}
+
+.ovi-text p{
+    letter-spacing: 0.5px;
+    line-height: 20px;
+    color: #e5e5e5;
+}
+
+.btn-group{
+    margin: 45px 0;
+}
+
+.btn-group .btn{
+    display: inline-block;
+    padding: 12px 28px;
+    background: rgb(7, 7, 7);
+    border-radius: 40px;
+    font-size: 16px;
+    color: rgb(254, 254, 254);
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 0 5px hsl(0, 0%, 100%),
+    0 0 25px #575757;
+    transition: .5s ease;
+    /* border-color: #d5d5d5;
+    color: #fff;
+    background-color: #333;
+    padding: 12px 25px;
+    margin: 5px 0;
+    margin-right: 7px;
+    border-radius: 30px;
+    border: 2px solid #e5e5e5;
+    box-shadow: 0 10px 10px -8px rgb(16, 147, 228); */
+}
+
+.btn-group .btn:hover{
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.734),
+    0 0 25px  cyan, 0 0 50px  cyan,
+    0 0 100px  cyan, 0 0 200px  cyan;
+}
+
+.btn.active{
+    border-color: #007ced;
+}
+
+.ovi-text .social a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.0500);
+    border-radius: 50%;
+    font-size: 30px;
+    color: rgb(234, 225, 225);
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    transition: .5s ease;
+    /* color: #e5e5e5;
+    font-size: 18px;
+    margin-right: 10px;
+    transition: 0.5s; */
+}
+
+.ovi-text .social a:hover{
+    background: rgb(0, 255, 255);
+    color: rgb(0, 0, 0);
+    box-shadow: 0 0 50px #ffffff;
+    transform: rotate(360deg);
+    /* columns: #007ced;
+    transform: rotate(360deg); */
+}
+
+
+/* RESPONSIVE DESIGN AND MOBILE VIEW  */
+
+@media(max-width:930px){
+    nav .togglebtn{
+        display: initial;
+    }
+
+    .click{
+        top: 45px;
+    }
+    .click span{
+        position: absolute;
+        margin-top: 12px;
+    }
+
+    .click span:first-child{
+        transform: rotate(-40deg);
+    }
+
+    .click span:nth-child(2){
+        opacity: 0;
+        margin: 0;
+    }
+
+    .click span:last-child{
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    nav .navlinks{
+        position: absolute;
+        top: 110px;
+        right: -100%;
+        bottom: 0;
+        width: 60%;
+        height: 100vh;
+        background-color: #222;
+        z-index: 3;
+        box-shadow: 5px 13px 30px rgba(0,0,0,0.1);
+        transition: 0.5s;
+        padding: 25px 0px;
+    }
+
+    nav .navlinks li{
+        display: block;
+    }
+
+    nav .navlinks li a{
+        display: block;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    nav .navlinks.open{
+        right: 0;
+    }
+}
+
+@media(max-width:768px){
+    .container{
+        flex-direction: column;
+        padding-top: 2rem;
+    }
+
+    .ovi-text{
+        padding: 40px 0px;
+    }
+}
